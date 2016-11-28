@@ -1,10 +1,6 @@
 var SurveysView = Backbone.View.extend({
 
-  el: "#app",
-
-  fetchAllSurveys: function() {
-
-  },
+  el: '#app',
 	
 	initialize: function() {
     this.surveysCollection = new SurveysCollection();
@@ -30,9 +26,9 @@ var SurveysView = Backbone.View.extend({
     });
   },
 
-  template: _.template("\
+  template: _.template('\
     <h1>All Surveys</h1>\
-    <ul id='surveys-container'></ul>\
-  ")
+    <ul id="surveys-container"></ul>\
+  ')
 
 });

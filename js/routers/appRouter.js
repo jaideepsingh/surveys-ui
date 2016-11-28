@@ -1,8 +1,8 @@
 var AppRouter = Backbone.Router.extend({
   
   routes: {
-    "" : "main",
-    "survey/:surveyid": "survey"
+    '' : 'main',
+    'survey/:surveyid': 'survey'
   },
 
   main: function() {
@@ -10,9 +10,9 @@ var AppRouter = Backbone.Router.extend({
   },
 
   survey: function(id) {
-    new SurveyPageView().render();
+    new SurveyPageView({
+      model: new SurveyModel({id: id})
+    }).render();
   }
-
-
 
 });
