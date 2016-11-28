@@ -5,7 +5,7 @@ var AppRouter = Backbone.Router.extend({
   },
 
   main: function() {
-    console.log('app started');
+    new SurveysView();
   }
 
 });
