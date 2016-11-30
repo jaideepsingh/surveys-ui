@@ -2,10 +2,15 @@ var QuestionView = Backbone.View.extend({
   
   tagName: 'div',
 
+  events: {
+    'change input[type="radio"]': 'updateAnswers'
+  },
+
   initialize: function(options) {
     this.questionId = options.question.id;
     this.questionTitle = options.question.title;
     this.questionOptions = options.question.options;
+
   },
 
   render: function() {
@@ -17,11 +22,15 @@ var QuestionView = Backbone.View.extend({
     return this;
   },
 
+  updateAnswers: function(e) {
+    this.model.set(this.questionId, e.target.value)
+  },
+
   template: _.template('\
     <h4><%= title %></h4>\
     <ul>\
       <% _.each(options, function(option) { %>\
-        <li><label><input type="radio" name="<%= qid %>" /> <%= option %><label></li>\
+        <li><label><input type="radio" name="<%= qid %>" value="<%= option %>" /> <%= option %><label></li>\
       <% }) %>\
     </ul>\
   ')

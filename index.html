@@ -9,12 +9,15 @@
   <script src="js/views/surveysView.js"></script>
   <script src="js/views/questionView.js"></script>
   <script src="js/views/surveyPageView.js"></script>
+  <script src="js/views/completionView.js"></script>
+  <script src="js/models/answersModel.js"></script>
   <script src="js/models/surveyModel.js"></script>
   <script src="js/collections/surveysCollection.js"></script>
 
   <script>
+    var appRouter;
     $(function() {
-      new AppRouter();
+      appRouter = new AppRouter();
       Backbone.history.start();
     });
   </script>

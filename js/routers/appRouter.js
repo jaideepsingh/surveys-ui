@@ -2,7 +2,8 @@ var AppRouter = Backbone.Router.extend({
   
   routes: {
     '' : 'main',
-    'survey/:surveyid': 'survey'
+    'survey/:surveyid': 'survey',
+    'complete': 'surveyComplete'
   },
 
   main: function() {
@@ -13,6 +14,10 @@ var AppRouter = Backbone.Router.extend({
     new SurveyPageView({
       model: new SurveyModel({id: id})
     }).render();
+  },
+
+  surveyComplete: function() {
+    new CompletionView().render();
   }
 
 });
