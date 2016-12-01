@@ -7,7 +7,7 @@ var CompletionView = Backbone.View.extend({
 
   template: _.template('\
     <h1>Thanks for answering the survey!</h1>\
-    <a href="/">Back to all surveys</a>\
+    <a href="#">Back to all surveys</a>\
   ')
 
 });
