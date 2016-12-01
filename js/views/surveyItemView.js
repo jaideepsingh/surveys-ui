@@ -7,6 +7,6 @@ var SurveyItemView = Backbone.View.extend({
   },
 
   template: _.template('\
-    <a href="#/survey/<%=id%>"><%= title %></a>\
+    <a href="#/survey/<%=id%>"><%= title %> (<%= tagline %>)</a>\
   ')
 });
