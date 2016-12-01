@@ -28,7 +28,7 @@ var SurveysView = Backbone.View.extend({
 
   template: _.template('\
     <h1>All Surveys</h1>\
-    <ul id="surveys-container"></ul>\
+    <ul id="surveys-container" class="surveys-list"></ul>\
   ')
 
 });

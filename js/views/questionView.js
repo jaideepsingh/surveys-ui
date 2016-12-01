@@ -2,6 +2,8 @@ var QuestionView = Backbone.View.extend({
   
   tagName: 'div',
 
+  className: 'question',
+
   events: {
     'change input[type="radio"]': 'updateAnswers'
   },
@@ -28,7 +30,7 @@ var QuestionView = Backbone.View.extend({
 
   template: _.template('\
     <h4><%= title %></h4>\
-    <ul>\
+    <ul class="options-list">\
       <% _.each(options, function(option) { %>\
         <li><label><input type="radio" name="<%= qid %>" value="<%= option %>" /> <%= option %><label></li>\
       <% }) %>\
